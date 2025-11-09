@@ -1,7 +1,4 @@
 import os
 
-GOOD = os.environ.get("GOOD_HASH")
-BAD = os.environ.get("BAD_HASH")
-
-os.system(f"git bisect start {BAD} {GOOD}")
+os.system(f"git bisect start c1a4be04b972b6c17db242fc37752ad517c29402 e4cfc6f77ebbe2e23550ddab682316ab4ce1c03c")
 os.system("git bisect run .venv3.9/bin/python manage.py test")
